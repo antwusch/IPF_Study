@@ -1,0 +1,105 @@
+IPF002
+NOW PROCESSING IPF002
+Now Registering: /home/exacloud/gscratch/BayouthLab/DataToProcess/IPF002//SCAN2//IPF002_SCAN2_0EX.nii.gz to /home/exacloud/gscratch/BayouthLab/DataToProcess/IPF002//SCAN1//IPF002_SCAN1_0EX.nii.gz
+###################################################################
+[If_Read_Disp] 0
+[Initial_Disp_Dir] NOINIT
+[Initial_Disp_Suffix] NOINIT
+[Moving_Image_File] /home/exacloud/gscratch/BayouthLab/DataToProcess/IPF002//SCAN2//IPF002_SCAN2_0EX.nii.gz
+[Fixed_Image_File] /home/exacloud/gscratch/BayouthLab/DataToProcess/IPF002//SCAN1//IPF002_SCAN1_0EX.nii.gz
+[Moving_Mask_File] /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//SCAN2/lung/alpha//IPF002_SCAN2_0EX.mask.nii.gz
+[Fixed_Mask_File] /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//SCAN1/lung/alpha//IPF002_SCAN1_0EX.mask.nii.gz
+[If_Read_VM] 0
+[Moving_VM_File] NOINIT
+[Fixed_VM_File] NOINIT
+[Moving_Lmk_File] NOINIT
+[Fixed_Lmk_File] NOINIT
+[Result_Dir] /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/
+[Log_Filename] Result.txt
+[Coeff_Filename] coeff.dat
+[Lmkerror_Filename] ResultLMK.txt
+[Image_Extension] .nii.gz
+[Total_Level_Number] 6
+[If_Write_Internal_Image] 0
+[If_Save_Fullsize_Disp] 0
+[Weight_SSTVD] 1
+[Weight_SSVMD] 1
+[Weight_Smooth] 1
+[Smooth_Alpha] 1
+[Smooth_Beta] 0
+[Smooth_Gamma] 0
+[Weight_Lmk] 0
+[Blut_Scale] 128
+[Mask_Lower_Threshold] 1
+[Mask_Upper_Threshold] 255
+[VM_Sigma_Min_Global] 2
+[VM_Sigma_Max_Global] 3
+[VM_Iteration_Global] 6
+
+[Level_Number] 1
+[Iteration] 1000
+[Image_Size_Ratio] 4 4 4 
+[Spline_Spacing] 32 32 32 
+[Dilate_Radius] 2
+[Weight_Smooth] 1
+
+[Level_Number] 2
+[Iteration] 1000
+[Image_Size_Ratio] 4 4 4 
+[Spline_Spacing] 16 16 16 
+[Dilate_Radius] 2
+[Weight_Smooth] 1
+
+[Level_Number] 3
+[Iteration] 1000
+[Image_Size_Ratio] 4 4 4 
+[Spline_Spacing] 8 8 8 
+[Dilate_Radius] 2
+[Weight_Smooth] 0.5
+
+[Level_Number] 4
+[Iteration] 1000
+[Image_Size_Ratio] 4 4 4 
+[Spline_Spacing] 4 4 4 
+[Dilate_Radius] 2
+[Weight_Smooth] 0.5
+
+[Level_Number] 5
+[Iteration] 200
+[Image_Size_Ratio] 2 2 2 
+[Spline_Spacing] 8 8 8 
+[Dilate_Radius] 3
+[Weight_Smooth] 0.25
+
+[Level_Number] 6
+[Iteration] 200
+[Image_Size_Ratio] 2 2 2 
+[Spline_Spacing] 4 4 4 
+[If_Write_Disp] 1
+[Dilate_Radius] 3
+[Weight_Smooth] 0.25
+################################################################
+                     Reading Parameters Done                    
+################################################################
+
+lowerThreshold: 1
+upperThreshold: 255
+Reading images ...
+/home/exacloud/gscratch/BayouthLab/DataToProcess/IPF002//SCAN2//IPF002_SCAN2_0EX.nii.gz
+/home/exacloud/gscratch/BayouthLab/DataToProcess/IPF002//SCAN1//IPF002_SCAN1_0EX.nii.gz
+/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//SCAN2/lung/alpha//IPF002_SCAN2_0EX.mask.nii.gz
+/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//SCAN1/lung/alpha//IPF002_SCAN1_0EX.mask.nii.gz
+Reading Image: /home/exacloud/gscratch/BayouthLab/DataToProcess/IPF002//SCAN2//IPF002_SCAN2_0EX.nii.gz
+/home/exacloud/gscratch/BayouthLab/ScriptsToProcessIPF/runRegistrationVessel.sh: line 104: 113253 Killed                  ${bin}/ireg-${sim}-vm $parfile
+###################################################################
+Registering Done!
+fixed = SCAN1_0EX
+moving = SCAN2_0EX
+regWorkflowVessel.sh: line 106: 113256 Killed                  ${bin_path}/CombineDisplacementForSSTVD.exe -in1 ${disp1} -in2 ${disp2} -in3 ${disp3} -out ${output_file} -normaldirection ${normalize_image}
+regWorkflowVessel.sh: line 114: /home/exacloud/gscratch/BayouthLab/src/LungReg/lungreg-bld/bin/calcJacMasked: No such file or directory
+regWorkflowVessel.sh: line 116: /home/exacloud/gscratch/BayouthLab/DataToProcess/src/LungReg/lungreg-bld/bin/calcJac: No such file or directory
+regWorkflowVessel.sh: line 130: /home/exacloud/gscratch/BayouthLab/src/LungReg/groupCode//WarpImage/project-build-Kai-38/WarpImage.exe: No such file or directory
+regWorkflowVessel.sh: line 144: /home/exacloud/gscratch/BayouthLab/DataToProcess/src/LungReg/lungreg-bld/bin/calcJac: No such file or directory
+regWorkflowVessel.sh: line 146: /home/exacloud/gscratch/BayouthLab/src/LungReg/groupCode//WarpImage/project-build-Kai-38/WarpImage.exe: No such file or directory
+regWorkflowVessel.sh: line 163: /home/exacloud/gscratch/BayouthLab/src/LungReg/groupCode//GammaIndex_SAC/project-build/GammaIndex_SAC.exe: No such file or directory
+slurmstepd: error: Detected 2 oom-kill event(s) in StepId=22209735.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.

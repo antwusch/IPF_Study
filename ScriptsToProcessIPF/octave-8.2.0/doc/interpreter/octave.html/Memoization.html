@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.8, https://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Memoization (GNU Octave (version 8.2.0))</title>
+
+<meta name="description" content="Memoization (GNU Octave (version 8.2.0))">
+<meta name="keywords" content="Memoization (GNU Octave (version 8.2.0))">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="index.html" rel="start" title="Top">
+<link href="Concept-Index.html" rel="index" title="Concept Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Vectorization-and-Faster-Code-Execution.html" rel="up" title="Vectorization and Faster Code Execution">
+<link href="Miscellaneous-Techniques.html" rel="next" title="Miscellaneous Techniques">
+<link href="Accumulation.html" rel="prev" title="Accumulation">
+<style type="text/css">
+<!--
+a.copiable-anchor {visibility: hidden; text-decoration: none; line-height: 0em}
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+span:hover a.copiable-anchor {visibility: visible}
+ul.no-bullet {list-style: none}
+-->
+</style>
+<link rel="stylesheet" type="text/css" href="octave.css">
+
+
+</head>
+
+<body lang="en">
+<div class="section" id="Memoization">
+<div class="header">
+<p>
+Next: <a href="Miscellaneous-Techniques.html" accesskey="n" rel="next">Miscellaneous Techniques</a>, Previous: <a href="Accumulation.html" accesskey="p" rel="prev">Accumulation</a>, Up: <a href="Vectorization-and-Faster-Code-Execution.html" accesskey="u" rel="up">Vectorization and Faster Code Execution</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Concept-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="Memoization-1"></span><h3 class="section">19.5 Memoization</h3>
+
+<p>Memoization is a technique to cache the results of slow function calls and
+return the cached value when the function is called with the same inputs again,
+instead of reevaluating it.  It is very common to replace function calls with
+lookup tables if the same inputs are happening over and over again in a known,
+predictable way.  Memoization is, at its core, an extension of this practice
+where the lookup table is extended even during runtime for new arguments not
+seen previously.  A basic theoretical background can be found on Wikipedia or
+any undergraduate-level computer science textbook.
+</p>
+<p>Octave&rsquo;s <code>memoize</code> function provides drop-in memoization functionality for
+any user function or Octave function, including compiled functions.
+</p>
+<span id="XREFmemoize"></span><dl class="def">
+<dt id="index-memoize"><span class="category">: </span><span><em><var>mem_fcn_handle</var> =</em> <strong>memoize</strong> <em>(<var>fcn_handle</var>)</em><a href='#index-memoize' class='copiable-anchor'> &para;</a></span></dt>
+<dd>
+<p>Create a memoized version <var>mem_fcn_handle</var> of function <var>fcn_handle</var>.
+</p>
+<p>Each call to the memoized version <var>mem_fcn_handle</var> checks the inputs
+against an internally maintained table, and if the inputs have occurred
+previously, then the result of the function call is returned from the table
+itself instead of evaluating the full function again.  This speeds up the
+execution of functions that are called with the same inputs multiple times.
+</p>
+<p>For example, here we take a slow user-written function named <code>slow_fcn</code>
+and memoize it to a new handle <code>cyc</code>.  The first executions of both
+versions take the same time, but the subsequent executions of the memoized
+version returns the previously computed value, thus reducing 2.4 seconds of
+runtime to only 2.4 milliseconds.  The final check verifies that the same
+result was returned from both versions.
+</p>
+<div class="example">
+<pre class="example">&gt;&gt; tic; <var>p</var> = slow_fcn (5040); toc
+Elapsed time is 2.41244 seconds.
+&gt;&gt; tic; <var>p</var> = slow_fcn (5040); toc
+Elapsed time is 2.41542 seconds.
+
+&gt;&gt; cyc = memoize (@slow_fcn);
+&gt;&gt; tic; <var>r</var> = cyc (5040); toc
+Elapsed time is 2.42609 seconds.
+&gt;&gt; tic; <var>r</var> = cyc (5040); toc
+Elapsed time is 0.00236511 seconds.
+
+&gt;&gt; all (<var>p</var> == <var>r</var>)
+ans = 1
+</pre></div>
+
+
+<p><strong>See also:</strong> <a href="#XREFclearAllMemoizedCaches">clearAllMemoizedCaches</a>.
+</p></dd></dl>
+
+
+<p>To memoize a function <code>z = foo(x, y)</code>, use this general pattern:
+</p>
+<div class="example">
+<pre class="example">foo2 = memoize (@(<var>x, y</var>) <var>foo(x, y)</var>);
+z = foo2 (x, y);
+</pre></div>
+
+<p>In the above example, the first line creates a memoized version <code>foo2</code> of
+the function <code>foo</code>.  For simple functions with only trivial wrapping, this
+line can also be shortened to:
+</p>
+<div class="example">
+<pre class="example">foo2 = memoize (@foo);
+</pre></div>
+
+<p>The second line <code>z = foo2 (x, y);</code> calls that memoized version <code>foo2</code>
+instead of the original function, allowing <code>memoize</code> to intercept the call
+and replace it with a looked-up value from a table if the inputs have occurred
+before, instead of evaluating the original function again.
+</p>
+<p>Note that this will not accelerate the <em>first</em> call to the function but
+only subsequent calls.
+</p>
+<p>Note that due to the overhead incurred by <code>memoize</code> to create and manage
+the lookup tables for each function, this technique is useful only for
+functions that take at least a couple of seconds to execute.  Such functions
+can be replaced by table lookups taking only a millisecond or so, but if the
+original function itself was taking only milliseconds, memoizing it will not
+speed it up.
+</p>
+<p>Recursive functions can be memoized as well, using a pattern like:
+</p>
+<div class="example">
+<pre class="example">function z = foo (x, y)
+  persistent foo2 = memoize (@foo);
+  foo2.CacheSize = 1e6;
+
+  ## Call the memoized version when recursing
+  z = foo2 (x, y);
+endfunction
+</pre></div>
+
+<p>The <code>CacheSize</code> can be optionally increased in anticipation of a large
+number of function calls, such as from inside a recursive function.  If
+<code>CacheSize</code> is exceeded, the memoization tables are resized, causing a
+slowdown.  Increasing the <code>CacheSize</code> thus works like preallocation to
+speed up execution.
+</p>
+<p>The function <code>clearAllMemoizedCaches</code> clears the memoization tables when
+they are no longer needed.
+</p>
+<span id="XREFclearAllMemoizedCaches"></span><dl class="def">
+<dt id="index-clearAllMemoizedCaches"><span class="category">: </span><span><em></em> <strong>clearAllMemoizedCaches</strong> <em>()</em><a href='#index-clearAllMemoizedCaches' class='copiable-anchor'> &para;</a></span></dt>
+<dd><p>Clear all memoized caches.
+</p>
+<p>Memoization maintains internal tables of which functions have been called
+with which inputs.  This function clears those tables to free memory,
+or for a fresh start.
+</p>
+
+<p><strong>See also:</strong> <a href="#XREFmemoize">memoize</a>.
+</p></dd></dl>
+
+
+</div>
+<hr>
+<div class="header">
+<p>
+Next: <a href="Miscellaneous-Techniques.html">Miscellaneous Techniques</a>, Previous: <a href="Accumulation.html">Accumulation</a>, Up: <a href="Vectorization-and-Faster-Code-Execution.html">Vectorization and Faster Code Execution</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Concept-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

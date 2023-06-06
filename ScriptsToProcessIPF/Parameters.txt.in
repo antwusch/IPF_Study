@@ -1,0 +1,47 @@
+[Subject] SUBJECT
+[Lung] LUNG
+[Num_Phases] 10
+[Phase] 0EX
+[Phase] 20IN
+[Phase] 40IN
+[Phase] 60IN
+[Phase] 80IN
+[Phase] 100IN
+[Phase] 80EX
+[Phase] 60EX
+[Phase] 40EX
+[Phase] 20EX
+[Prior_Filename] PRIOR_PATH/SUBJECT_SCAN_REFPHASE.LUNG.nii.gz
+[CT_Filename] CT_PATH/SUBJECT_SCAN_0EX.nii.gz
+[CT_Filename] CT_PATH/SUBJECT_SCAN_20IN.nii.gz
+[CT_Filename] CT_PATH/SUBJECT_SCAN_40IN.nii.gz
+[CT_Filename] CT_PATH/SUBJECT_SCAN_60IN.nii.gz
+[CT_Filename] CT_PATH/SUBJECT_SCAN_80IN.nii.gz
+[CT_Filename] CT_PATH/SUBJECT_SCAN_100IN.nii.gz
+[CT_Filename] CT_PATH/SUBJECT_SCAN_80EX.nii.gz
+[CT_Filename] CT_PATH/SUBJECT_SCAN_60EX.nii.gz
+[CT_Filename] CT_PATH/SUBJECT_SCAN_40EX.nii.gz
+[CT_Filename] CT_PATH/SUBJECT_SCAN_20EX.nii.gz
+[Prior_Is_Image] 1
+[If_Region_Cost] 0
+[Region_Cost_Wt] 0
+[Output_Path] OUTPUT_PATH
+[If_GVF] 1
+[Read_GVF] 0
+
+[Num_Vertices] 5000
+[Column_Size] 60
+[Node_Spacing] 0.4
+[Arc_Coeff] 20
+[Arc_Power] 1
+[Hard_Smooth] 20
+[Hard_Smooth_Phase] -49
+
+[Window_Half_Size] 2
+[Kernel_Sigma] 2
+[Gradient_Weight] 0.5
+[Region_Weight] 0.5
+[ELF_Power] 2
+[Smooth_It] 0
+
+[Global_Setting_End]

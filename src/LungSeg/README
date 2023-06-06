@@ -1,0 +1,6 @@
+NSTRUCTIONS FOR LUNGSEG BUILD
+1.	Download the source code (the LungSegCodeToBuild.gz)
+2.	Place and unzip into your home directory– this should contain the lungseg folder, optnet-wu folder, optnet folder, LungData Folder, and ext_packages-bld folder containing the source to the dependencies.  
+3.	Download and install cmake version 3.4 or higher
+4.	Navigate the the lungseg folder and run the BuildFromScratch.sh script located in the lungseg folder using the command sh BuildFromScratch.sh # where # is the number of processors to build using.
+

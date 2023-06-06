@@ -1,0 +1,23 @@
+[Num_Phases] 16
+[Phase] 0IN
+[Phase] 5IN
+[Phase] 10IN
+[Phase] 15IN
+[Phase] 25IN
+[Phase] 30IN
+[Phase] 35IN
+[Phase] 50IN
+[Phase] 50EX
+[Phase] 65EX
+[Phase] 70EX
+[Phase] 75EX
+[Phase] 85EX
+[Phase] 90EX
+[Phase] 95EX
+[Phase] 100EX
+[Image_Path] /CT_PATH/
+
+[Image_Filename_Base] SUBJECT_SCAN_
+[Image_Filename_Suffix] .nii.gz
+[Output_Filename] /OUTPUT_PATH/SUBJECT_SCAN.nii.gz
+[Global_Setting_End]

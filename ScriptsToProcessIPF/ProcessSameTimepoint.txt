@@ -1,0 +1,574 @@
+IPF002
+NOW PROCESSING IPF002
+Now Registering: /home/exacloud/gscratch/BayouthLab/DataToProcess/IPF002//SCAN2//IPF002_SCAN2_0EX.nii.gz to /home/exacloud/gscratch/BayouthLab/DataToProcess/IPF002//SCAN1//IPF002_SCAN1_0EX.nii.gz
+###################################################################
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/parameters.txt.old1’: Operation not permitted
+[If_Read_Disp] 0
+[Initial_Disp_Dir] NOINIT
+[Initial_Disp_Suffix] NOINIT
+[Moving_Image_File] /home/exacloud/gscratch/BayouthLab/DataToProcess/IPF002//SCAN2//IPF002_SCAN2_0EX.nii.gz
+[Fixed_Image_File] /home/exacloud/gscratch/BayouthLab/DataToProcess/IPF002//SCAN1//IPF002_SCAN1_0EX.nii.gz
+[Moving_Mask_File] /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//SCAN2/lung/alpha//IPF002_SCAN2_0EX.mask.nii.gz
+[Fixed_Mask_File] /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//SCAN1/lung/alpha//IPF002_SCAN1_0EX.mask.nii.gz
+[If_Read_VM] 0
+[Moving_VM_File] NOINIT
+[Fixed_VM_File] NOINIT
+[Moving_Lmk_File] NOINIT
+[Fixed_Lmk_File] NOINIT
+[Result_Dir] /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/
+[Log_Filename] Result.txt
+[Coeff_Filename] coeff.dat
+[Lmkerror_Filename] ResultLMK.txt
+[Image_Extension] .nii.gz
+[Total_Level_Number] 6
+[If_Write_Internal_Image] 0
+[If_Save_Fullsize_Disp] 0
+[Weight_SSTVD] 1
+[Weight_SSVMD] 1
+[Weight_Smooth] 1
+[Smooth_Alpha] 1
+[Smooth_Beta] 0
+[Smooth_Gamma] 0
+[Weight_Lmk] 0
+[Blut_Scale] 128
+[Mask_Lower_Threshold] 1
+[Mask_Upper_Threshold] 255
+[VM_Sigma_Min_Global] 2
+[VM_Sigma_Max_Global] 3
+[VM_Iteration_Global] 6
+
+[Level_Number] 1
+[Iteration] 1000
+[Image_Size_Ratio] 4 4 4 
+[Spline_Spacing] 32 32 32 
+[Dilate_Radius] 2
+[Weight_Smooth] 1
+
+[Level_Number] 2
+[Iteration] 1000
+[Image_Size_Ratio] 4 4 4 
+[Spline_Spacing] 16 16 16 
+[Dilate_Radius] 2
+[Weight_Smooth] 1
+
+[Level_Number] 3
+[Iteration] 1000
+[Image_Size_Ratio] 4 4 4 
+[Spline_Spacing] 8 8 8 
+[Dilate_Radius] 2
+[Weight_Smooth] 0.5
+
+[Level_Number] 4
+[Iteration] 1000
+[Image_Size_Ratio] 4 4 4 
+[Spline_Spacing] 4 4 4 
+[Dilate_Radius] 2
+[Weight_Smooth] 0.5
+
+[Level_Number] 5
+[Iteration] 200
+[Image_Size_Ratio] 2 2 2 
+[Spline_Spacing] 8 8 8 
+[Dilate_Radius] 3
+[Weight_Smooth] 0.25
+
+[Level_Number] 6
+[Iteration] 200
+[Image_Size_Ratio] 2 2 2 
+[Spline_Spacing] 4 4 4 
+[If_Write_Disp] 1
+[Dilate_Radius] 3
+[Weight_Smooth] 0.25
+################################################################
+                     Reading Parameters Done                    
+################################################################
+
+lowerThreshold: 1
+upperThreshold: 255
+Reading images ...
+/home/exacloud/gscratch/BayouthLab/DataToProcess/IPF002//SCAN2//IPF002_SCAN2_0EX.nii.gz
+/home/exacloud/gscratch/BayouthLab/DataToProcess/IPF002//SCAN1//IPF002_SCAN1_0EX.nii.gz
+/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//SCAN2/lung/alpha//IPF002_SCAN2_0EX.mask.nii.gz
+/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//SCAN1/lung/alpha//IPF002_SCAN1_0EX.mask.nii.gz
+Reading Image: /home/exacloud/gscratch/BayouthLab/DataToProcess/IPF002//SCAN2//IPF002_SCAN2_0EX.nii.gz
+Reading Image: /home/exacloud/gscratch/BayouthLab/DataToProcess/IPF002//SCAN1//IPF002_SCAN1_0EX.nii.gz
+Reading Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//SCAN2/lung/alpha//IPF002_SCAN2_0EX.mask.nii.gz
+Reading Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//SCAN1/lung/alpha//IPF002_SCAN1_0EX.mask.nii.gz
+Thresholding masks ...
+Masking HU images ...
+/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/
+Writing Template and Target images ...
+/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Image1.nii.gz
+/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Image2.nii.gz
+Origin: [-255.5, -535.5, -976]
+Initializing arrays ...
+Generating VM image 1...
+############################
+sigma = 2:   339240   32.9227 %
+sigma = 2.2:   88716   8.60974 %
+sigma = 2.4:   154292   14.9738 %
+sigma = 2.6:   0   0 %
+sigma = 2.8:   69043   6.70051 %
+Total vessel number: 1030414
+Rescaling VM image 1...
+Generating VM image 2...
+############################
+sigma = 2:   338230   32.8558 %
+sigma = 2.2:   87987   8.54709 %
+sigma = 2.4:   153715   14.9319 %
+sigma = 2.6:   0   0 %
+sigma = 2.8:   68555   6.65946 %
+Total vessel number: 1029438
+Rescaling VM image 2...
+############################/home/exacloud/gscratch/BayouthLab/src/LungReg/lungreg/src/ireg-sstvd-vm/ireg-sstvd-vm.cxx 488
+Writing Template and Target images Vesselness Measurement ...
+/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Image1VM.nii.gz
+/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Image2VM.nii.gz
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Image1VM.nii.gz
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Image2VM.nii.gz
+Converting HU ITKImages to Arrays done
+no landmarks read: 
+Avg lmkerror (mm) before registration...
+0
+/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/coeff.dat
+wt_tv=1, wt_vm=1, wt_smooth=1, wt_lmk=0
+scale_x = 4
+wt_vm = 1
+_4_4_4_32_32_32.nii.gz
+level 1 start: _4_4_4_32_32_32.nii.gz
+dilateRadius = 2
+sigmaMin = 0,  sigmaMax = 0,  nScales = 0
+maskCT = 97473
+Dilating Mask ...
+maskCT1 = 142260
+maskCT2 = 160209
+initilizing arrayBasis
+initilizing arrayLocation
+interpolate lmk disp
+begin optimization
+------------------------------------------------------------------------------------------------------------------------
+iter SSTVD-cost   weighted SSVMD-cost    weighted LAP-cost    total-cost   lmkerror   JacMin   JacMaxInv  SSVMD-weight
+------------------------------------------------------------------------------------------------------------------------
+  0    524.70    513.71 (    513.71)      0.00 (      0.00)     1038.41      0.00      1.00      1.00      1.00
+  1    418.89    449.03 (    449.03)      0.01 (      0.01)      867.92      0.00      1.00      1.00      1.00
+  2    371.50    423.25 (    423.25)      0.04 (      0.04)      794.78      0.00      0.99      1.00      1.00
+  3    346.11    413.91 (    413.91)      0.10 (      0.10)      760.12      0.00      0.99      0.99      1.00
+  4    331.03    410.94 (    410.94)      0.18 (      0.18)      742.15      0.00      0.98      0.99      1.00
+  5    323.06    409.42 (    409.42)      0.18 (      0.18)      732.66      0.00      0.98      0.99      1.00
+  6    320.09    406.29 (    406.29)      0.17 (      0.17)      726.55      0.00      0.98      0.99      1.00
+  7    316.25    402.39 (    402.39)      0.17 (      0.17)      718.81      0.00      0.99      0.99      1.00
+  8    311.23    397.88 (    397.88)      0.17 (      0.17)      709.28      0.00      0.98      0.99      1.00
+  9    311.79    396.05 (    396.05)      0.19 (      0.19)      708.03      0.00      0.98      0.99      1.00
+ 10    306.45    392.50 (    392.50)      0.20 (      0.20)      699.15      0.00      0.98      0.99      1.00
+ 11    306.44    392.51 (    392.51)      0.19 (      0.19)      699.15      0.00      0.98      0.99      1.00
+ 12    306.43    392.51 (    392.51)      0.19 (      0.19)      699.14      0.00      0.98      0.99      1.00
+ 13    306.42    392.53 (    392.53)      0.19 (      0.19)      699.14      0.00      0.98      0.99      1.00
+ 14    306.42    392.53 (    392.53)      0.19 (      0.19)      699.14      0.00      0.98      0.99      1.00
+ 15    306.41    392.51 (    392.51)      0.19 (      0.19)      699.10      0.00      0.98      0.99      1.00
+ 16    306.40    392.50 (    392.50)      0.19 (      0.19)      699.09      0.00      0.98      0.99      1.00
+ 17    306.39    392.47 (    392.47)      0.18 (      0.18)      699.05      0.00      0.98      0.99      1.00
+ 18    306.39    392.47 (    392.47)      0.18 (      0.18)      699.04      0.00      0.98      0.99      1.00
+ 19    306.15    392.36 (    392.36)      0.18 (      0.18)      698.69      0.00      0.98      0.99      1.00
+ 20    306.15    392.36 (    392.36)      0.18 (      0.18)      698.69      0.00      0.98      0.99      1.00
+ 21    306.15    392.36 (    392.36)      0.18 (      0.18)      698.69      0.00      0.98      0.99      1.00
+ 22    306.03    392.28 (    392.28)      0.18 (      0.18)      698.49      0.00      0.99      0.99      1.00
+ 23    306.03    392.28 (    392.28)      0.18 (      0.18)      698.49      0.00      0.99      0.99      1.00
+ 24    305.96    392.32 (    392.32)      0.17 (      0.17)      698.46      0.00      0.98      0.98      1.00
+ 25    305.71    392.46 (    392.46)      0.18 (      0.18)      698.35      0.00      0.98      0.98      1.00
+ 26    305.66    392.50 (    392.50)      0.18 (      0.18)      698.34      0.00      0.98      0.98      1.00
+ 27    305.66    392.50 (    392.50)      0.18 (      0.18)      698.34      0.00      0.98      0.98      1.00
+optimization ended 1
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Jac_4_4_4_32_32_32.nii.gz
+updating displacements
+Avg lmkerror (mm) after registration:
+0.04455
+calculating and saving deformed image
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/vmDef12_4_4_4_32_32_32.nii.gz
+end of level 1 @ 690 seconds
+scale_x = 4
+wt_vm = 1
+_4_4_4_16_16_16.nii.gz
+level 2 start: _4_4_4_16_16_16.nii.gz
+dilateRadius = 2
+sigmaMin = 0,  sigmaMax = 0,  nScales = 0
+maskCT = 97206
+Dilating Mask ...
+maskCT1 = 141941
+maskCT2 = 159868
+initilizing arrayBasis
+initilizing arrayLocation
+interpolate lmk disp
+begin optimization
+------------------------------------------------------------------------------------------------------------------------
+iter SSTVD-cost   weighted SSVMD-cost    weighted LAP-cost    total-cost   lmkerror   JacMin   JacMaxInv  SSVMD-weight
+------------------------------------------------------------------------------------------------------------------------
+  0    305.58    391.86 (    391.86)      0.18 (      0.18)      697.61      0.05      0.98      0.98      1.00
+  1    302.40    392.91 (    392.91)      0.26 (      0.26)      695.57      0.05      0.98      0.98      1.00
+  2    296.01    391.85 (    391.85)      0.45 (      0.45)      688.30      0.05      0.98      0.98      1.00
+  3    291.37    391.06 (    391.06)      0.65 (      0.65)      683.08      0.05      0.97      0.98      1.00
+  4    286.59    389.01 (    389.01)      0.71 (      0.71)      676.31      0.05      0.97      0.98      1.00
+  5    284.40    387.80 (    387.80)      0.71 (      0.71)      672.91      0.05      0.97      0.98      1.00
+  6    281.40    386.48 (    386.48)      0.75 (      0.75)      668.63      0.05      0.97      0.98      1.00
+  7    281.40    386.48 (    386.48)      0.75 (      0.75)      668.63      0.05      0.97      0.98      1.00
+optimization ended 1
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Jac_4_4_4_16_16_16.nii.gz
+updating displacements
+Avg lmkerror (mm) after registration:
+0.04455
+calculating and saving deformed image
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/vmDef12_4_4_4_16_16_16.nii.gz
+end of level 2 @ 268 seconds
+scale_x = 4
+wt_vm = 1
+_4_4_4_8_8_8.nii.gz
+level 3 start: _4_4_4_8_8_8.nii.gz
+dilateRadius = 2
+sigmaMin = 0,  sigmaMax = 0,  nScales = 0
+maskCT = 97206
+Dilating Mask ...
+maskCT1 = 141974
+maskCT2 = 159921
+initilizing arrayBasis
+initilizing arrayLocation
+interpolate lmk disp
+begin optimization
+------------------------------------------------------------------------------------------------------------------------
+iter SSTVD-cost   weighted SSVMD-cost    weighted LAP-cost    total-cost   lmkerror   JacMin   JacMaxInv  SSVMD-weight
+------------------------------------------------------------------------------------------------------------------------
+  0    281.70    386.29 (    386.29)      0.29 (      0.57)      668.28      0.05      0.97      0.98      1.00
+  1    263.44    385.02 (    385.02)      1.57 (      3.14)      650.03      0.05      0.95      0.97      1.00
+  2    251.17    379.00 (    379.00)      2.12 (      4.23)      632.29      0.05      0.95      0.97      1.00
+  3    249.34    378.29 (    378.29)      2.19 (      4.39)      629.82      0.05      0.95      0.97      1.00
+  4    246.51    377.50 (    377.50)      2.31 (      4.62)      626.32      0.05      0.96      0.97      1.00
+  5    244.52    377.99 (    377.99)      2.39 (      4.78)      624.90      0.05      0.95      0.97      1.00
+  6    242.66    377.87 (    377.87)      2.43 (      4.87)      622.97      0.05      0.95      0.96      1.00
+  7    241.95    378.11 (    378.11)      2.39 (      4.77)      622.45      0.05      0.95      0.96      1.00
+  8    241.95    378.11 (    378.11)      2.39 (      4.77)      622.45      0.05      0.95      0.96      1.00
+  9    241.95    378.11 (    378.11)      2.39 (      4.77)      622.45      0.05      0.95      0.96      1.00
+ 10    241.84    378.16 (    378.16)      2.34 (      4.69)      622.34      0.05      0.95      0.96      1.00
+ 11    241.78    378.06 (    378.06)      2.32 (      4.64)      622.16      0.05      0.95      0.96      1.00
+ 12    241.70    378.10 (    378.10)      2.32 (      4.64)      622.12      0.05      0.95      0.96      1.00
+ 13    241.71    378.00 (    378.00)      2.39 (      4.77)      622.09      0.05      0.95      0.95      1.00
+ 14    241.63    378.02 (    378.02)      2.39 (      4.79)      622.04      0.05      0.95      0.95      1.00
+ 15    241.61    378.03 (    378.03)      2.39 (      4.79)      622.04      0.05      0.95      0.95      1.00
+ 16    241.57    378.05 (    378.05)      2.39 (      4.78)      622.01      0.05      0.95      0.95      1.00
+ 17    241.55    378.06 (    378.06)      2.38 (      4.77)      621.99      0.05      0.95      0.95      1.00
+ 18    241.52    378.06 (    378.06)      2.38 (      4.76)      621.96      0.05      0.95      0.95      1.00
+ 19    241.52    378.06 (    378.06)      2.38 (      4.76)      621.96      0.05      0.95      0.95      1.00
+ 20    241.47    378.01 (    378.01)      2.38 (      4.76)      621.86      0.05      0.96      0.95      1.00
+ 21    241.47    378.01 (    378.01)      2.38 (      4.76)      621.86      0.05      0.96      0.95      1.00
+ 22    241.47    378.01 (    378.01)      2.38 (      4.76)      621.86      0.05      0.96      0.95      1.00
+ 23    241.43    378.03 (    378.03)      2.39 (      4.77)      621.84      0.05      0.96      0.95      1.00
+ 24    241.43    378.03 (    378.03)      2.39 (      4.77)      621.84      0.05      0.96      0.95      1.00
+ 25    241.43    378.02 (    378.02)      2.39 (      4.77)      621.84      0.05      0.96      0.95      1.00
+ 26    241.44    378.01 (    378.01)      2.39 (      4.77)      621.84      0.05      0.96      0.95      1.00
+ 27    241.44    378.01 (    378.01)      2.39 (      4.77)      621.84      0.05      0.96      0.95      1.00
+optimization ended 1
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Jac_4_4_4_8_8_8.nii.gz
+updating displacements
+Avg lmkerror (mm) after registration:
+0.04455
+calculating and saving deformed image
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/vmDef12_4_4_4_8_8_8.nii.gz
+end of level 3 @ 720 seconds
+scale_x = 4
+wt_vm = 1
+_4_4_4_4_4_4.nii.gz
+level 4 start: _4_4_4_4_4_4.nii.gz
+dilateRadius = 2
+sigmaMin = 0,  sigmaMax = 0,  nScales = 0
+maskCT = 97129
+Dilating Mask ...
+maskCT1 = 141936
+maskCT2 = 159875
+initilizing arrayBasis
+initilizing arrayLocation
+interpolate lmk disp
+begin optimization
+------------------------------------------------------------------------------------------------------------------------
+iter SSTVD-cost   weighted SSVMD-cost    weighted LAP-cost    total-cost   lmkerror   JacMin   JacMaxInv  SSVMD-weight
+------------------------------------------------------------------------------------------------------------------------
+  0    242.61    377.35 (    377.35)      1.99 (      3.99)      621.96      0.05      0.96      0.95      1.00
+  1    222.14    370.73 (    370.73)      4.83 (      9.65)      597.70      0.05      0.91      0.95      1.00
+  2    220.76    369.65 (    369.65)      5.05 (     10.10)      595.46      0.05      0.91      0.95      1.00
+  3    220.09    368.96 (    368.96)      5.23 (     10.47)      594.28      0.05      0.92      0.95      1.00
+  4    219.18    368.74 (    368.74)      5.37 (     10.74)      593.29      0.05      0.92      0.95      1.00
+  5    218.45    368.34 (    368.34)      5.41 (     10.82)      592.19      0.05      0.93      0.95      1.00
+  6    218.05    368.27 (    368.27)      5.33 (     10.65)      591.65      0.05      0.93      0.94      1.00
+  7    217.53    368.36 (    368.36)      5.20 (     10.39)      591.08      0.05      0.92      0.94      1.00
+  8    217.38    368.33 (    368.33)      5.17 (     10.34)      590.88      0.05      0.92      0.94      1.00
+  9    217.19    368.30 (    368.30)      5.19 (     10.38)      590.68      0.05      0.92      0.93      1.00
+ 10    217.15    368.29 (    368.29)      5.19 (     10.39)      590.63      0.05      0.92      0.93      1.00
+ 11    217.11    368.26 (    368.26)      5.20 (     10.41)      590.58      0.05      0.92      0.93      1.00
+ 12    217.11    368.26 (    368.26)      5.20 (     10.41)      590.58      0.05      0.92      0.93      1.00
+optimization ended 1
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Jac_4_4_4_4_4_4.nii.gz
+updating displacements
+Avg lmkerror (mm) after registration:
+0.04455
+calculating and saving deformed image
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/vmDef12_4_4_4_4_4_4.nii.gz
+end of level 4 @ 302 seconds
+scale_x = 2
+wt_vm = 1
+_2_2_2_8_8_8.nii.gz
+level 5 start: _2_2_2_8_8_8.nii.gz
+dilateRadius = 3
+sigmaMin = 0,  sigmaMax = 0,  nScales = 0
+maskCT = 781573
+Dilating Mask ...
+maskCT1 = 1027369
+maskCT2 = 1096391
+initilizing arrayBasis
+initilizing arrayLocation
+interpolate lmk disp
+begin optimization
+------------------------------------------------------------------------------------------------------------------------
+iter SSTVD-cost   weighted SSVMD-cost    weighted LAP-cost    total-cost   lmkerror   JacMin   JacMaxInv  SSVMD-weight
+------------------------------------------------------------------------------------------------------------------------
+  0   3897.41   5284.13 (   5284.13)      4.37 (     17.50)     9185.92      0.05      0.92      0.94      1.00
+  1   3575.12   4773.62 (   4773.62)     14.29 (     57.16)     8363.03      0.05      0.89      0.92      1.00
+  2   3461.89   4601.73 (   4601.73)     25.12 (    100.48)     8088.74      0.05      0.87      0.90      1.00
+  3   3398.73   4528.80 (   4528.80)     30.70 (    122.79)     7958.23      0.05      0.86      0.89      1.00
+  4   3366.58   4493.03 (   4493.03)     33.95 (    135.78)     7893.56      0.05      0.86      0.89      1.00
+  5   3345.12   4483.00 (   4483.00)     35.16 (    140.66)     7863.29      0.05      0.86      0.89      1.00
+  6   3333.81   4480.00 (   4480.00)     35.61 (    142.42)     7849.41      0.05      0.86      0.89      1.00
+  7   3322.23   4476.57 (   4476.57)     36.23 (    144.91)     7835.02      0.05      0.86      0.89      1.00
+  8   3311.86   4473.79 (   4473.79)     36.86 (    147.44)     7822.51      0.05      0.86      0.89      1.00
+  9   3306.66   4472.15 (   4472.15)     37.04 (    148.17)     7815.86      0.05      0.86      0.89      1.00
+ 10   3301.74   4470.50 (   4470.50)     37.06 (    148.22)     7809.29      0.05      0.86      0.89      1.00
+ 11   3298.42   4470.57 (   4470.57)     36.96 (    147.83)     7805.94      0.05      0.86      0.89      1.00
+ 12   3294.46   4471.05 (   4471.05)     36.82 (    147.26)     7802.33      0.05      0.86      0.89      1.00
+ 13   3292.82   4472.47 (   4472.47)     36.71 (    146.85)     7802.00      0.05      0.87      0.89      1.00
+ 14   3287.16   4471.57 (   4471.57)     36.82 (    147.29)     7795.56      0.05      0.87      0.89      1.00
+ 15   3285.65   4470.49 (   4470.49)     36.93 (    147.74)     7793.07      0.05      0.86      0.89      1.00
+ 16   3282.69   4468.20 (   4468.20)     37.30 (    149.19)     7788.19      0.05      0.86      0.89      1.00
+ 17   3279.40   4465.86 (   4465.86)     37.62 (    150.46)     7782.88      0.05      0.86      0.89      1.00
+ 18   3278.41   4465.75 (   4465.75)     37.59 (    150.34)     7781.75      0.05      0.86      0.89      1.00
+ 19   3277.38   4466.01 (   4466.01)     37.51 (    150.06)     7780.90      0.05      0.86      0.89      1.00
+ 20   3276.25   4466.21 (   4466.21)     37.49 (    149.97)     7779.95      0.05      0.86      0.89      1.00
+ 21   3275.62   4466.23 (   4466.23)     37.48 (    149.90)     7779.33      0.05      0.86      0.89      1.00
+ 22   3272.29   4465.50 (   4465.50)     37.81 (    151.25)     7775.60      0.05      0.86      0.89      1.00
+ 23   3272.14   4465.41 (   4465.41)     37.85 (    151.39)     7775.40      0.05      0.86      0.89      1.00
+ 24   3271.41   4464.25 (   4464.25)     37.93 (    151.73)     7773.60      0.05      0.86      0.89      1.00
+ 25   3270.74   4462.72 (   4462.72)     38.04 (    152.18)     7771.50      0.05      0.86      0.89      1.00
+ 26   3269.01   4462.12 (   4462.12)     38.05 (    152.21)     7769.18      0.05      0.86      0.89      1.00
+ 27   3269.15   4461.56 (   4461.56)     38.00 (    152.00)     7768.71      0.05      0.86      0.89      1.00
+ 28   3269.15   4461.56 (   4461.56)     38.00 (    152.00)     7768.71      0.05      0.86      0.89      1.00
+optimization ended 1
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Jac_2_2_2_8_8_8.nii.gz
+updating displacements
+Avg lmkerror (mm) after registration:
+0.04455
+calculating and saving deformed image
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/vmDef12_2_2_2_8_8_8.nii.gz
+end of level 5 @ 1753 seconds
+scale_x = 2
+wt_vm = 1
+_2_2_2_4_4_4.nii.gz
+level 6 start: _2_2_2_4_4_4.nii.gz
+dilateRadius = 3
+sigmaMin = 0,  sigmaMax = 0,  nScales = 0
+maskCT = 781014
+Dilating Mask ...
+maskCT1 = 1026325
+maskCT2 = 1095236
+initilizing arrayBasis
+initilizing arrayLocation
+interpolate lmk disp
+begin optimization
+------------------------------------------------------------------------------------------------------------------------
+iter SSTVD-cost   weighted SSVMD-cost    weighted LAP-cost    total-cost   lmkerror   JacMin   JacMaxInv  SSVMD-weight
+------------------------------------------------------------------------------------------------------------------------
+  0   3272.75   4464.72 (   4464.72)     32.57 (    130.27)     7770.04      0.05      0.86      0.89      1.00
+  1   3084.54   4321.62 (   4321.62)     60.12 (    240.47)     7466.27      0.05      0.83      0.86      1.00
+  2   3054.42   4283.19 (   4283.19)     66.61 (    266.44)     7404.22      0.05      0.83      0.86      1.00
+  3   3047.62   4269.67 (   4269.67)     68.50 (    274.00)     7385.79      0.05      0.84      0.86      1.00
+  4   3040.76   4263.10 (   4263.10)     69.96 (    279.84)     7373.82      0.05      0.84      0.86      1.00
+  5   3033.57   4263.00 (   4263.00)     70.99 (    283.95)     7367.55      0.05      0.84      0.86      1.00
+  6   3029.22   4265.50 (   4265.50)     71.02 (    284.06)     7365.73      0.05      0.83      0.86      1.00
+  7   3028.69   4266.12 (   4266.12)     70.89 (    283.55)     7365.69      0.05      0.83      0.86      1.00
+  8   3025.33   4270.09 (   4270.09)     70.09 (    280.35)     7365.50      0.05      0.83      0.86      1.00
+  9   3024.43   4270.18 (   4270.18)     70.07 (    280.26)     7364.68      0.05      0.83      0.86      1.00
+ 10   3023.15   4268.39 (   4268.39)     70.04 (    280.16)     7361.58      0.05      0.83      0.86      1.00
+ 11   3022.08   4265.58 (   4265.58)     70.17 (    280.70)     7357.84      0.05      0.84      0.86      1.00
+ 12   3020.75   4263.92 (   4263.92)     70.31 (    281.23)     7354.97      0.05      0.84      0.86      1.00
+ 13   3020.58   4264.11 (   4264.11)     70.26 (    281.05)     7354.95      0.05      0.84      0.86      1.00
+ 14   3020.52   4264.17 (   4264.17)     70.24 (    280.98)     7354.93      0.05      0.84      0.86      1.00
+ 15   3020.52   4264.17 (   4264.17)     70.24 (    280.98)     7354.93      0.05      0.84      0.86      1.00
+optimization ended 1
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Jac_2_2_2_4_4_4.nii.gz
+updating displacements
+Avg lmkerror (mm) after registration:
+0.04455
+calculating and saving deformed image
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/vmDef12_2_2_2_4_4_4.nii.gz
+Writing displacements
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Disp12_x_2_2_2_4_4_4.nii.gz
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Disp12_y_2_2_2_4_4_4.nii.gz
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Disp12_z_2_2_2_4_4_4.nii.gz
+end of level 6 @ 1955 seconds
+Level 1 costs 11.5 min;
+Level 2 costs 4.46667 min;
+Level 3 costs 12 min;
+Level 4 costs 5.03333 min;
+Level 5 costs 29.2167 min;
+Level 6 costs 32.5833 min;
+The total running time is: 94.8min (1.58 hour).
+Avg lmkerror after registration:
+0.00000	0.04455
+###################################################################
+Registering Done!
+fixed = SCAN1_0EX
+moving = SCAN2_0EX
+before orienter
+1 0 0
+0 1 0
+0 0 1
+
+after orienter
+1 0 0
+0 1 0
+0 0 1
+
+before orienter
+1 0 0
+0 1 0
+0 0 1
+
+after orienter
+1 0 0
+0 1 0
+0 0 1
+
+before orienter
+1 0 0
+0 1 0
+0 0 1
+
+after orienter
+1 0 0
+0 1 0
+0 0 1
+
+Writing the image as 
+
+/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX//IPF002_SCAN2_0EX_to_SCAN1_0EX_displacementField.mha
+
+Writing Succeeded:------------------------------------
+Reading Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX//Disp12_x_2_2_2_4_4_4.nii.gz
+Reading Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX//Disp12_y_2_2_2_4_4_4.nii.gz
+Reading Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX//Disp12_z_2_2_2_4_4_4.nii.gz
+Reading Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//SCAN1/lung/alpha//IPF002_SCAN1_0EX.mask.nii.gz
+Reading images done...
+512 512 317
+Differentiating displacements done...
+minVal = 0.834383,   maxVal = 1.1625
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX//IPF002_SCAN2_0EX_to_SCAN1_0EX_Jacobian.masked.nii.gz
+Reading Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX//Disp12_x_2_2_2_4_4_4.nii.gz
+Reading Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX//Disp12_y_2_2_2_4_4_4.nii.gz
+Reading Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX//Disp12_z_2_2_2_4_4_4.nii.gz
+Reading images done...
+512 512 317
+Differentiating displacements done...
+minVal = 0.71356,   maxVal = 1.30752
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX//IPF002_SCAN2_0EX_to_SCAN1_0EX_Jacobian.nii.gz
+before orienter
+1 0 0
+0 1 0
+0 0 1
+
+after orienter
+1 0 0
+0 1 0
+0 0 1
+
+before orienter
+1 0 0
+0 1 0
+0 0 1
+
+after orienter
+1 0 0
+0 1 0
+0 0 1
+
+The interpolation type is: l
+InputImage deformed
+Writing the image as 
+
+/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX//IPF002_SCAN2_0EX_warped_to_SCAN1_0EX.nii.gz
+
+Writing Succeeded:------------------------------------
+Reading Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX//Disp12_x_2_2_2_4_4_4.nii.gz
+Reading Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX//Disp12_y_2_2_2_4_4_4.nii.gz
+Reading Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX//Disp12_z_2_2_2_4_4_4.nii.gz
+Reading images done...
+512 512 317
+Differentiating displacements done...
+minVal = 0.71356,   maxVal = 1.30752
+Writing Image: /home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX//IPF002_SCAN2_0EX_to_SCAN1_0EX_Jacobian_unmasked.nii.gz
+before orienter
+1 0 0
+0 1 0
+0 0 1
+
+after orienter
+1 0 0
+0 1 0
+0 0 1
+
+before orienter
+1 0 0
+0 1 0
+0 0 1
+
+after orienter
+1 0 0
+0 1 0
+0 0 1
+
+The interpolation type is: l
+InputImage deformed
+Writing the image as 
+
+/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX//IPF002_SCAN2_0EX_to_SCAN1_0EX_Jacobian_warped_to_SCAN1_0EX.nii.gz
+
+Writing Succeeded:------------------------------------
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/vmDef12_4_4_4_4_4_4.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Image2.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/vmDef12_2_2_2_4_4_4.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Image1VM.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Result.txt’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/vmDef12_2_2_2_8_8_8.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Deformed12_2_2_2_4_4_4.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Jac_2_2_2_8_8_8.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Jac_2_2_2_4_4_4.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Deformed12_4_4_4_4_4_4.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Deformed12_2_2_2_8_8_8.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/ResultLMK.txt’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Disp12_x_2_2_2_4_4_4.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/IPF002_SCAN2_0EX_to_SCAN1_0EX_Jacobian.masked.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/IPF002_SCAN2_0EX_to_SCAN1_0EX_Jacobian.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Deformed12_4_4_4_32_32_32.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/IPF002_SCAN2_0EX_to_SCAN1_0EX_Jacobian_unmasked.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/res2.stat’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Jac_4_4_4_32_32_32.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Deformed12_4_4_4_16_16_16.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/IPF002_SCAN2_0EX_to_SCAN1_0EX_displacementField.mha’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/res4.stat’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/vmDef12_4_4_4_8_8_8.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Disp12_y_2_2_2_4_4_4.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/coeff.dat’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/IPF002_SCAN2_0EX_warped_to_SCAN1_0EX.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Jac_4_4_4_4_4_4.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/vmDef12_4_4_4_32_32_32.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Disp12_z_2_2_2_4_4_4.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/vmDef12_4_4_4_16_16_16.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Jac_4_4_4_16_16_16.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Image1.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Deformed12_4_4_4_8_8_8.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Jac_4_4_4_8_8_8.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/IPF002_SCAN2_0EX_to_SCAN1_0EX_Jacobian_warped_to_SCAN1_0EX.nii.gz’: Operation not permitted
+chmod: changing permissions of ‘/home/exacloud/gscratch/BayouthLab/ProcessedResults/IPF002//RegistrationWithVessel/SCAN2_0EX_to_SCAN1_0EX/Image2VM.nii.gz’: Operation not permitted

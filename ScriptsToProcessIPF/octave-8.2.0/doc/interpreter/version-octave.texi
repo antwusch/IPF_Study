@@ -1,0 +1,4 @@
+@set UPDATED 13 April 2023
+@set UPDATED-MONTH April 2023
+@set EDITION 8.2.0
+@set VERSION 8.2.0

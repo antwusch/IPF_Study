@@ -1,0 +1,38 @@
+subject=$1
+scan=$2
+
+#Make the full base to download
+mkdir "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/"
+mkdir "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/"
+mkdir "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}"
+mkdir "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/100IN_to_0EX/"
+mkdir "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/80IN_to_0EX/"
+mkdir "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/60IN_to_0EX/"
+mkdir "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/40IN_to_0EX/"
+mkdir "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/20IN_to_0EX/"
+mkdir "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/20EX_to_0EX/"
+mkdir "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/40EX_to_0EX/"
+mkdir "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/60EX_to_0EX/"
+mkdir "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/80EX_to_0EX/"
+
+base="/home/exacloud/gscratch/BayouthLab/ProcessedResults/${subject}/RegistrationWithVessel_Low_Epsilon_005/"
+Phase100I="${base}/${scan}_100IN_to_${scan}_0EX/Jac_2_2_2_4_4_4.nii.gz"
+Phase80I="${base}/${scan}_80IN_to_${scan}_0EX/Jac_2_2_2_4_4_4.nii.gz"
+Phase60I="${base}/${scan}_60IN_to_${scan}_0EX/Jac_2_2_2_4_4_4.nii.gz"
+Phase40I="${base}/${scan}_40IN_to_${scan}_0EX/Jac_2_2_2_4_4_4.nii.gz"
+Phase20I="${base}/${scan}_20IN_to_${scan}_0EX/Jac_2_2_2_4_4_4.nii.gz"
+Phase20E="${base}/${scan}_20EX_to_${scan}_0EX/Jac_2_2_2_4_4_4.nii.gz"
+Phase40E="${base}/${scan}_40EX_to_${scan}_0EX/Jac_2_2_2_4_4_4.nii.gz"
+Phase60E="${base}/${scan}_60EX_to_${scan}_0EX/Jac_2_2_2_4_4_4.nii.gz"
+Phase80E="${base}/${scan}_80EX_to_${scan}_0EX/Jac_2_2_2_4_4_4.nii.gz"
+
+cp "/home/exacloud/gscratch/BayouthLab/ProcessedResults/${subject}/${scan}/lung/alpha/${subject}_${scan}_0EX.mask.nii.gz" "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}" 
+cp ${Phase100I} "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/100IN_to_0EX/"
+cp ${Phase80I} "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/80IN_to_0EX/"
+cp ${Phase60I} "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/60IN_to_0EX/"
+cp ${Phase40I} "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/40IN_to_0EX/"
+cp ${Phase20I} "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/20IN_to_0EX/"
+cp ${Phase20E} "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/20EX_to_0EX/"
+cp ${Phase40E} "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/40EX_to_0EX/" 
+cp ${Phase60E} "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/60EX_to_0EX/"
+cp ${Phase80E} "/home/exacloud/gscratch/BayouthLab/JacsToProcessForLERN/${subject}/${scan}/80EX_to_0EX/"

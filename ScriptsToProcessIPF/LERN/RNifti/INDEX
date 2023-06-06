@@ -1,0 +1,19 @@
+$.niftiImage            Access to metadata elements
+ExtensionCodes          NIfTI extension codes
+asNifti                 Create or modify an NIfTI image object
+channels                Extract channels from RGB data
+defaultInfoPanel        Info panels for the built-in viewer
+dim.internalImage       Internal images
+extensions              NIfTI extensions
+ndim                    Number of dimensions
+niftiHeader             Dump or construct a raw NIfTI or ANALYZE header
+niftiVersion            Check the format version of a file
+pixdim                  Pixel dimensions and units
+readNifti               Read NIfTI or ANALYZE format files
+rgbArray                RGB arrays
+view                    A basic 3D image viewer
+voxelToWorld            Transform points between voxel and "world"
+                        coordinates
+writeNifti              Write a NIfTI or ANALYZE format file
+xform                   Obtain or replace the "xform" transforms for an
+                        image

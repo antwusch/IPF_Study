@@ -1,0 +1,2 @@
+sh runLER4D_MorePhases.sh IPF007 SCAN2 95
+

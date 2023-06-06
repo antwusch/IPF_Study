@@ -1,0 +1,6 @@
+
+sh runLER4D.sh IPF023 SCAN7 60
+sh runLER4D.sh IPF007 SCAN7 60
+sh runLER4D.sh IPF003 SCAN8 60
+
+
