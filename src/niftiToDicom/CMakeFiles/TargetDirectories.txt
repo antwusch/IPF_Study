@@ -1,1 +1,0 @@
-/Users/awuschner/src/niftiToDicom/CMakeFiles/niftiToDicom.exe.dir
